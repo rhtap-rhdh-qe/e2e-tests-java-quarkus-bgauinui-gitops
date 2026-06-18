@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: e2e-tests-java-quarkus-bgauinui
+  janus-idp.io/tekton: e2e-tests-java-quarkus-bgauinui
+  backstage.io/kubernetes-id: e2e-tests-java-quarkus-bgauinui
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: e2e-tests-java-quarkus-bgauinui
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
